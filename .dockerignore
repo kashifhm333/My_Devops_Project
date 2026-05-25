@@ -1,0 +1,34 @@
+# Massive Dependency Directories
+node_modules
+npm-debug.log*
+yarn-error.log*
+
+# Local Build Outputs (Let Docker build it fresh)
+build/
+dist/
+out/
+
+# Git System (Speeds up Docker build cache)
+.git
+.gitignore
+.github
+
+# Cloud and Local Secrets (Security Guard)
+.env
+.env.local
+*.pem
+*.key
+.aws/
+.azure/
+
+# Infrastructure as Code (Terraform)
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+
+# System & Editor Settings
+.vscode/
+.idea/
+.DS_Store
