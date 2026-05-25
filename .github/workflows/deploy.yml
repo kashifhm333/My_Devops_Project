@@ -47,7 +47,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mobile-spec-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/mobile-spec-app:latest
 
 
   deploy-to-azure:
@@ -57,7 +57,7 @@ jobs:
       - name: Execute Remote SSH Commands
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ vars.VM_PUBLIC_IP }}
+          host: ${{ secrets.VM_PUBLIC_IP }}
           username: azureuser
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
