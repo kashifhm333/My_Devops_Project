@@ -57,7 +57,7 @@ jobs:
       - name: Execute Remote SSH Commands
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.VM_PUBLIC_IP }}
+          host: ${{ vars.VM_PUBLIC_IP }}
           username: azureuser
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
